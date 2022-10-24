@@ -16,7 +16,7 @@ def git_push():
     except:
         print('Some error occured while pushing the code')
 
-with open("date.txt", "w") as f:
+with open("C://programming//python//git_auto_pusher//date.txt", "w") as f:
     f.write(str(random.randrange(0,9_999_999_999)))
 
 git_push()
