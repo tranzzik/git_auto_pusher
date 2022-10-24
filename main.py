@@ -17,6 +17,6 @@ def git_push():
         print('Some error occured while pushing the code')
 
 with open("C://programming//python//git_auto_pusher//date.txt", "w") as f:
-    f.write(TODAY_FULL)
+    f.write(TODAY)
 
 git_push()
