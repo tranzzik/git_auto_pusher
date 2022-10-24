@@ -1,7 +1,13 @@
 from git import Repo
+from datetime import datetime
+import random
 
 PATH_OF_GIT_REPO = r'C://programming//python//git_auto_pusher//.git'  # make sure .git folder is properly configured
-COMMIT_MESSAGE = 'comment from python script'
+TODAY = datetime.today().strftime('%Y-%m-%d')
+COMMIT_MESSAGE = f'Auto commit {TODAY}'
+
+with open("date.txt", "w") as f:
+    f.write(str(random.randrange(0,9_999_999_999)))
 
 def git_push():
     try:
