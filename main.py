@@ -4,7 +4,6 @@ import random
 
 PATH_OF_GIT_REPO = r'C://programming//python//git_auto_pusher//.git'  # make sure .git folder is properly configured
 TODAY = datetime.today().strftime('%Y-%m-%d')
-TODAY_FULL = datetime.now().strftime("%d/%m/%Y %H:%M:%S")
 COMMIT_MESSAGE = f'Auto commit {TODAY}'
 
 def git_push():
@@ -18,6 +17,6 @@ def git_push():
         print('Some error occured while pushing the code')
 
 with open("C://programming//python//git_auto_pusher//date.txt", "w") as f:
-    f.write(TODAY_FULL)
+    f.write(str(random.randrange(0,9_999_999_999)))
 
 git_push()
