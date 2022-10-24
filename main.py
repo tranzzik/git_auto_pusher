@@ -6,9 +6,6 @@ PATH_OF_GIT_REPO = r'C://programming//python//git_auto_pusher//.git'  # make sur
 TODAY = datetime.today().strftime('%Y-%m-%d')
 COMMIT_MESSAGE = f'Auto commit {TODAY}'
 
-with open("date.txt", "w") as f:
-    f.write(str(random.randrange(0,9_999_999_999)))
-
 def git_push():
     try:
         repo = Repo(PATH_OF_GIT_REPO)
@@ -17,6 +14,9 @@ def git_push():
         origin = repo.remote(name='origin')
         origin.push()
     except:
-        print('Some error occured while pushing the code')    
+        print('Some error occured while pushing the code')
+
+with open("date.txt", "w") as f:
+    f.write(str(random.randrange(0,9_999_999_999)))
 
 git_push()
