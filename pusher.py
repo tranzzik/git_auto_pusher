@@ -1,7 +1,9 @@
 from git import Repo
 from datetime import datetime
+from random import randint
 import platform
 import os
+
 
 
 TODAY = datetime.today().strftime('%Y-%m-%d')
@@ -12,6 +14,7 @@ if platform.system() == 'Linux':
     PATH_OF_GIT_REPO =  os.path.join(os.path.expanduser('~'), 'git_auto_pusher') 
     with open(os.path.join(os.path.expanduser('~'), 'git_auto_pusher', 'date.txt'), "w") as f:
         f.write(TODAY)
+        f.write(str(randint(0, 100)))
 else:
     PATH_OF_GIT_REPO = r'C://programming//python//git_auto_pusher//.git'  
     with open("C://programming//python//git_auto_pusher//date.txt", "w") as f:
